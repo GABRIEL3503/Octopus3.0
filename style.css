@@ -140,7 +140,7 @@ body {
 
   .contenedor-titulo {
     margin-top: 15px;
-    margin-left: -349px;
+    margin-left: -288px;
   }
   
   h2 {
@@ -216,17 +216,7 @@ margin-top: -12px;
   max-width: 25%;
 }
 
-@media (max-width: 768px) {
-  .card{ width: 75vw;
-    margin-left: -26px;}
- 
-   
-    .contenedor-titulo{
-      margin-top: 83px;
-      margin-left: -233px;
-    }
 
-}
 
 
 .logo{
@@ -234,4 +224,29 @@ margin-top: -12px;
   position: absolute;
     top: 8%;
     left: 42%;
+}
+@media (max-width: 768px) {
+  .card{ width: 75vw;
+    margin-left: -26px;}
+ 
+   
+    .contenedor-titulo{
+      margin-top: 83px;
+      margin-left: -165px;
+    }
+.logo{
+  left: 23%;
+}
+}
+
+.swiper-slide {
+  background: none;
+  margin-right: 131px !important;
+  width: 80%; /* Ajusta el ancho de cada slide según tus necesidades */
+  margin: 0 auto;
+}
+
+.swiper-slide img {
+  width: 256%;
+  height: 100%;S
 }
