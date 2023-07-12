@@ -13,8 +13,9 @@ body {
 }
 .texto{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+
+  justify-content: space-between;
+  flex-wrap: wrap;
   display: flex;
   flex-wrap: wrap;
   margin-top: 0;
@@ -219,9 +220,7 @@ margin-top: -12px;
   .card{ width: 75vw;
     margin-left: -26px;}
  
-    h2{
-      max-width: 85%;
-    }
+   
     .contenedor-titulo{
       margin-top: 83px;
       margin-left: -233px;
@@ -231,6 +230,7 @@ margin-top: -12px;
 
 
 .logo{
+  width: 222px;
   position: absolute;
     top: 8%;
     left: 42%;
