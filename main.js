@@ -1,5 +1,5 @@
 var typed = new Typed('#element', {
-  strings: ['Atractivos.', 'Personsalizados.' ,'Veloces.'],
+  strings: ['Atractivos.', 'Personsalizados' ,'Veloces.'],
   typeSpeed: 111,
   loop:true,
 });

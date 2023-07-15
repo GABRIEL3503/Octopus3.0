@@ -139,7 +139,7 @@ titulo-{
 
   h1{
     margin-bottom: -17px;
-    font-size:53px ;
+    font-size:56px ;
   }
   .contenedor-titulo{
     display: flex;
@@ -161,7 +161,7 @@ titulo-{
 
   #element{
     color: #eb5ef0;
-    margin-left: 32px;
+    margin-left: 20px;
   }
   @media (max-width: 767px) {
     .botones{
@@ -258,7 +258,7 @@ ul{
 
 h1{
   left: 20%;
-  top: 38vh;
+  top: 37vh;
   position: absolute;
 }
 
@@ -310,5 +310,5 @@ justify-content: center;
     position: absolute;
   }
   h1 {
-    left: 29vw;}
+    left: 28vw;}
 }
