@@ -9,7 +9,7 @@ body {
 
 #particles-js {
   background-color: #0123c1;
-  height: 400vh;
+  height: 350vh;
   width: 100%;
   z-index: 1;
 }
@@ -311,4 +311,11 @@ justify-content: center;
   }
   h1 {
     left: 28vw;}
+}
+#whatsapp-logo {
+  max-width: 53px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
 }
