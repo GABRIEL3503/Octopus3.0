@@ -188,8 +188,7 @@ display: flex;
     height: auto;
     width: 24vw;
     border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 20px 0px
-    ;
+    box-shadow: rgb(75 14 155) 2px 2px 20px 0px
   }
 ul{
   padding: 0;
@@ -283,8 +282,15 @@ svg{
   align-items: center;
 }
 .card {
-  backdrop-filter: blur(4px);
+  background-color: #ffffffa3;
+
  
+}
+.card h2{
+  color: #0123c1;
+}
+.card svg{
+color: #fb00ff;
 }
 
 .card .d-flex{
@@ -318,4 +324,7 @@ justify-content: center;
   bottom: 20px;
   right: 20px;
   z-index: 9999;
+}
+.logo{
+ 
 }
