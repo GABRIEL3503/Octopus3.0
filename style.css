@@ -8,7 +8,7 @@ body {
 }
 
 #particles-js {
-  background-color: #0123c1;
+  background-color: #1053cc;
   height: 350vh;
   width: 100%;
   z-index: 1;
@@ -90,7 +90,8 @@ titulo-{
   width: 0;
   height: 0;
   border-radius: 50%;
-  background-color: #0048cd;
+  background-color: #1053cc;
+  ;
   z-index: -1;
   opacity: 0;
   transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
@@ -103,7 +104,8 @@ titulo-{
 
 .bn39 .bn39span {
   align-items: center;
-  background: #0123c1;
+  background: #1053cc;
+  ;
   border-radius: 6px;
   display: flex;
   justify-content: center;
@@ -154,7 +156,7 @@ titulo-{
   
   h2 {
     font-weight: 600;
-    color: #ffffff;
+    color:#ebebeb;
     
    
   }
@@ -217,7 +219,7 @@ ul{
 }
 .card h2{
   display: flex;
-
+margin-left: 10px;
 
   font-size: 20px;
  
@@ -278,16 +280,17 @@ svg{
 }
 .card-body li {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 .card {
-  background-color: #ffffffa3;
+  background-color: #ffffff59
 
  
 }
 .card h2{
-  color: #0123c1;
+  color: white;
+  /* color:rgb(16 83 204) */
 }
 .card svg{
 color: #fb00ff;
@@ -296,7 +299,7 @@ color: #fb00ff;
 .card .d-flex{
   flex-direction: column;
 display: flex;
-justify-content: center;
+justify-content: flex-start;
 }
 .swiper-button-next:after{
   color: white;
@@ -325,6 +328,14 @@ justify-content: center;
   right: 20px;
   z-index: 9999;
 }
-.logo{
- 
+.logos{
+ width: 3%;
 }
+.card .h2a{
+  font-size: 24px;
+  color:   rgb(54, 54, 54)
+  }
+  .bicon{
+    color: aliceblue;
+  }
+
