@@ -219,14 +219,9 @@ ul{
 }
 .card h2{
   display: flex;
-margin-left: 10px;
-
+  margin-left: 10px;
   font-size: 20px;
- 
 }
-
-
-
 
 .logo{
   width: 222px;
@@ -290,7 +285,6 @@ svg{
 }
 .card h2{
   color: white;
-  /* color:rgb(16 83 204) */
 }
 .card svg{
 color: #fb00ff;
