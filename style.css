@@ -218,6 +218,7 @@ ul{
   object-fit: cover;
 }
 .card h2{
+  justify-content: center;
   display: flex;
   margin-left: 10px;
   font-size: 20px;
