@@ -156,7 +156,7 @@ titulo-{
   
   h2 {
     font-weight: 600;
-    color:#ebebeb;
+    color:#ffffff;
    font-family: 'Nunito', sans-serif;;
     
    
@@ -285,7 +285,7 @@ svg{
 background: rgba(255, 255, 255, 0.2);
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
+backdrop-filter: blur(-65px);
 -webkit-backdrop-filter: blur(5px);
 border: 1px solid rgba(255, 255, 255, 0.3);
 
@@ -334,8 +334,13 @@ justify-content: flex-start;
  width: 3%;
 }
 .card .h2a{
+  text-align: center;
+  font-weight: 900;
+  background-color:#1052cc94;
+  padding: 8px;
+  border-radius: 9px;
   font-size: 24px;
-  color:   rgb(54, 54, 54)
+  color:#d3d3d3;  ;
   }
   .bicon{
     color: aliceblue;
@@ -350,9 +355,20 @@ justify-content: flex-start;
     font-weight: 400;
   }
   .card .llamadoaccion{
-   
-    color:  #1053cc;
-    background-color: rgba(255, 255, 255, 0.377);
-    padding: 10px;
-    border-radius: 9px;
+ color: white;
+      border: 1px solid #fb00ff;
+      background-color: #1053cc;
+      background-color: rgba(255, 255, 255, 0.377);
+      padding: 10px;
+      border-radius: 9px;
   }
+  
+
+  h3{
+    font-size: 16px;
+    color: white;
+    left: 10%;
+    top: 8vh;
+    position: absolute;
+  }
+
