@@ -4,12 +4,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 .bot{
-  margin-top: -52px;
+  margin-top: 4px;
 }
 
 #particles-js {
   background-color: #1053cc;
-  height: 350vh;
+  height: 100vh;
   width: 100%;
   z-index: 1;
 }
@@ -179,7 +179,7 @@ display: flex;
   }
   .container-card{
     position: absolute;
-    top: 86vh;
+    top: 103vh;
     left: 50px;
     flex-wrap: wrap;
     display: flex;
@@ -189,7 +189,7 @@ display: flex;
     padding: 22px;
     margin: 12px;
     height: auto;
-    width: 24vw;
+    width: 90vw;
     border-radius: 15px;
     box-shadow: rgb(75 14 155) 2px 2px 20px 0px
   }
@@ -214,7 +214,7 @@ ul{
 
 .swiper-slide img {
   /* display: block; */
-  max-width: 100%;
+  max-width: 70%;
   max-height: 85%;
   object-fit: cover;
 }
@@ -268,6 +268,7 @@ svg{
   margin-left: 2px;
 }
 .card {
+  margin-top: 32px;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -281,18 +282,20 @@ svg{
   align-items: center;
 }
 .card {
+  display: flex;
 /* From https://css.glass */
-background: rgba(255, 255, 255, 0.2);
+background: rgb(255 255 255 / 8%);
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(-65px);
 -webkit-backdrop-filter: blur(5px);
+justify-content: space-evenly;
 border: 1px solid rgba(255, 255, 255, 0.3);
 
  
 }
 .card h2{
-  color: white;
+  color:white;
 }
 .card svg{
 color: #fb00ff;
@@ -335,15 +338,15 @@ justify-content: flex-start;
 }
 .card .h2a{
   text-align: center;
-  font-weight: 900;
-  background-color:#1052cc94;
+  font-weight: 500;
+  background-color:#1052ccef;
   padding: 8px;
   border-radius: 9px;
   font-size: 24px;
-  color:#d3d3d3;  ;
+  color:#e7e7e7;  ;
   }
   .bicon{
-    color: aliceblue;
+    color: #fb00ff;
   }
 
 
@@ -355,12 +358,12 @@ justify-content: flex-start;
     font-weight: 400;
   }
   .card .llamadoaccion{
- color: white;
-      border: 1px solid #fb00ff;
-      background-color: #1053cc;
-      background-color: rgba(255, 255, 255, 0.377);
-      padding: 10px;
-      border-radius: 9px;
+    text-align: center;
+    color: white;
+    border: 1px solid #002d80;
+   background-color: rgb(255 255 255 / 26%);
+    padding: 10px;
+    border-radius: 9px;
   }
   
 
@@ -372,3 +375,143 @@ justify-content: flex-start;
     position: absolute;
   }
 
+
+
+/* Estilo por defecto para la barra de navegación */
+#navbar {
+  z-index: 2222;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* background-color: #333; */
+  color: #fff;
+  padding: 1rem;
+}
+
+#navbar ul {
+  font-size: 18px;
+  margin-right: 29px;
+  display: flex;
+  list-style: none;
+}
+
+#navbar ul li {
+  margin: 0 1rem;
+}
+
+#navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#toggleIcon {
+  display: none;
+}
+
+/* Estilos cuando la pantalla es menor a 768px (tablet) */
+@media (max-width: 768px) {
+  #navbar {
+      flex-direction: column;
+  }
+
+  #navbar ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+  }
+
+  #navbar ul li {
+      margin: 1rem 0;
+      text-align: center;
+  }
+
+  #navbar.active ul {
+      display: flex;
+  }
+
+  #toggleIcon {
+      display: flex;
+      justify-content: flex-end;
+      width: 80%;
+  }
+
+  #toggleIcon .open {
+      display: block;
+  }
+
+  #toggleIcon .close {
+      display: none;
+  }
+
+  #navbar.active #toggleIcon .open {
+      display: none;
+  }
+
+  #navbar.active #toggleIcon .close {
+      display: block;
+  }
+}
+
+#navbar ul li {
+  margin: 0 1rem;
+  position: relative;
+  padding: 0 1rem;
+}
+
+#navbar ul li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 40%;
+  transform: translateY(-50%);
+  height: 2rem; /* Ajusta la altura a tu gusto */
+  width: 1px;
+  background-color: #fff;
+}
+#navbar ul li {
+  position: relative;
+  margin-left: -12px; /* ajusta este valor según tus necesidades */
+}
+
+#navbar ul li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1.5rem;
+  width: 1px;
+  background-color: #fff;
+}
+#navbar ul li a {
+  display: inline-block;  /* Asegúrate de que el enlace sea un bloque en línea */
+  transition: transform 0.3s ease;
+}
+
+#navbar ul li a:hover {
+  color: #eb5ef0;
+  transform: translateY(-10%) scale(2.1);  /* Combina las transformaciones aquí */
+}
+
+.backro{
+  background-color: #151617;
+  /* background-image:url( "./Polygon Luminary.svg") ; */
+}
+.galeria{
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.imagen1{
+  width: 35vw;
+height: 81%;
+padding: 28px;
+}
+body{
+  background-color: #151617ef; ;
+}

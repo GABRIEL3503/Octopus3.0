@@ -4,9 +4,13 @@ var typed = new Typed('#element', {
   loop:true,
 });
 
-var swiper = new Swiper(".mySwiper", {
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+
+
+
+
+const navbar = document.getElementById('navbar');
+const toggleIcon = document.getElementById('toggleIcon');
+
+toggleIcon.addEventListener('click', () => {
+    navbar.classList.toggle('active');
 });
