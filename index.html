@@ -8,10 +8,10 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
 </head>
@@ -19,21 +19,26 @@
 <body>
   <nav id="navbar">
     <div id="toggleIcon" class="icon">
-        <span class="open">&#9776;</span> <!-- Menú Hamburguesa -->
-        <span class="close">&times;</span> <!-- X -->
+      <span class="open">&#9776;</span> <!-- Menú Hamburguesa -->
+      <span class="close">&times;</span> <!-- X -->
     </div>
     <ul id="navItems">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="galery.html">Galería</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+      <button id="light-theme-button">Tema claro</button>
+      <button id="dark-theme-button">Tema oscuro</button>
+      <button id="colorful-theme-button">Tema colorido</button>
+
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="galery.html">Galería</a></li>
+      <li><a href="#contacto">Contacto</a></li>
     </ul>
-</nav>
+  </nav>
   <div id="particles-js"></div>
+
   <header>
 
     <div class="titulo-">
       <span>
-        <h1>Octopus</h1>
+        <h1 id="elemento">Octopus</h1>
       </span>
       <span>
         <div class="contenedor-titulo">
@@ -43,7 +48,7 @@
         </div>
       </span>
     </div>
-<!-- <h3  style="color: azure;"> Fondo interactivo <br>
+    <!-- <h3  style="color: azure;"> Fondo interactivo <br>
 <span style="font-size: 15px;">(proba haciendo cliks y dezlizate sobre la pantalla)</span></h3> -->
 
 
@@ -55,18 +60,18 @@
 
   </header>
 
-  <div class="container-card">
-    <div class="card">
+  <div class="container-cardo">
+    <div class="cardo">
       <div class="card-body">
         <ul>
           <h2 class="h2a">Con tu pagina web vas a:</h2>
           <li>
             <box-icon class="filter" name='check-double' color='#fb00ff'></box-icon>
-            <h2>Generar confianza  </h2>
+            <h2>Generar confianza </h2>
             </span>
           </li>
           <li>
-            <box-icon class="filter" name='check-double'  color='#fb00ff'></box-icon>
+            <box-icon class="filter" name='check-double' color='#fb00ff'></box-icon>
             <span>
               <h2>Mejorar la imagen de tu marca</h2>
             </span>
@@ -99,20 +104,56 @@
               <h2>Tener una vidriera disponible las 24hs, los 7 días de la semana</h2>
             </span>
           </li>
-<h2 class="llamadoaccion">Transforma tu presencia en línea con un solo clic!! </h2>
+          <h2 class="llamadoaccion">Transforma tu presencia en línea con un solo clic!! </h2>
         </ul>
 
       </div>
-      <img class="imagen1"src="./img4.jpg" alt=""></div>
-    
- 
-
-    <div class="card">
-      <div class="card-body">
-       
-        <img class="logos" style="width: 30%;     margin-left: 56px;" src="logo-1.png" alt="">
-      </div>
+      <img class="imagen1" src="./img4.jpg" alt="">
     </div>
+<section>
+  <div class="card" style="display: block;">
+    <h2 class="h2a">Algunos de nuestros trabajos destacados:</h2>
+    <div class="galeria">
+      <div class="galeria">
+        <div class="swiper-slide d-flex">
+          <span> <img src="Video-230715015756-unscreen.gif" alt=""></span>
+          <span class="bot"> <a class="bn39 animate__animated  animate__bounceInUp" href="/"><span
+                class="bn39span">Ver</span>
+            </a></span>
+
+        </div>
+        <div class="swiper-slide  d-flex">
+          <span><img src="laic-1.png" alt=""></span>
+          <span class="bot"> <a class="bn39 animate__animated  animate__bounceInUp" href="/"><span
+                class="bn39span">Ver</span>
+            </a></span>
+
+        </div>
+
+        <div class="swiper-slide  d-flex">
+          <span><img src="panggg.png" alt=""> </span>
+          <span class="bot"><a class="bn39 animate__animated  animate__bounceInUp" href="/"><span
+                class="bn39span">Ver</span>
+            </a></span>
+        </div>
+        <div class="swiper-slide  d-flex"><span><img src="paracaidismo.png" alt=""></span>
+          <span class="bot"> <a class="bn39 animate__animated  animate__bounceInUp" href="/"><span
+                class="bn39span">Ver</span>
+            </a></span>
+        </div>
+
+
+      </div>
+      
+    </div>
+
+  </div>
+</section>
+
+    <div> <img class="logos" style="width: 15%;     margin-left: 56px;" src="logo-1.png" alt=""></div>
+
+
+
   </div>
 
 

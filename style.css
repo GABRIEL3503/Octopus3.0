@@ -8,7 +8,7 @@ body {
 }
 
 #particles-js {
-  background-color: #1053cc;
+ 
   height: 100vh;
   width: 100%;
   z-index: 1;
@@ -222,7 +222,7 @@ ul{
   justify-content: center;
   display: flex;
   margin-left: 10px;
-  font-size: 20px;
+ 
 }
 
 .logo{
@@ -277,12 +277,14 @@ svg{
   padding: 10px;
 }
 .card-body li {
+  margin-bottom: -16px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 .card {
   display: flex;
+  flex-wrap: wrap;
 /* From https://css.glass */
 background: rgb(255 255 255 / 8%);
 border-radius: 16px;
@@ -291,6 +293,9 @@ backdrop-filter: blur(-65px);
 -webkit-backdrop-filter: blur(5px);
 justify-content: space-evenly;
 border: 1px solid rgba(255, 255, 255, 0.3);
+
+/* From https://css.glass */
+
 
  
 }
@@ -403,7 +408,7 @@ justify-content: flex-start;
 }
 
 #navbar ul li a {
-  color: #fff;
+  /* color: #fff; */
   text-decoration: none;
 }
 
@@ -512,6 +517,117 @@ justify-content: flex-start;
 height: 81%;
 padding: 28px;
 }
-body{
-  background-color: #151617ef; ;
+
+
+/* -----------temas ----------*/
+/* Estilos para el tema claro */
+.light-theme-body {
+  display: flex;
+  background-color: #dae4e6;
+}
+.light-theme-h1 {
+  display: flex;
+  color: #fb00ff;
+}
+.light-theme-h2 {
+  display: flex;
+  color: #222222;
+}
+.light-theme-card {
+  display: flex;
+  background-color: #dddddd;
+}
+
+/* Estilos para el tema oscuro */
+.dark-theme-body {
+  display: flex;
+  background-color: #000000;
+}
+.dark-theme-h1 {
+  display: flex;
+  
+  color: #ffffff;
+}
+.dark-theme-h2 {
+  display: flex;
+  color: #cccccc;
+}
+.dark-theme-card {
+  display: flex;
+  background-color: #444444;
+}
+
+/* Estilos para el tema colorido */
+.colorful-theme-body {
+  display: flex;
+  background-color: #002d80;
+}
+.colorful-theme-h1 {
+  display: flex;
+  color: white;
+}
+.colorful-theme-h2 {
+  display: flex;
+  color: white;
+}
+.colorful-theme-card {
+  display: flex;
+  background-color: #ffff00;
+}
+
+
+/* Estilos para el tema claro */
+.light-theme-body { /* estilos */ }
+.light-theme-h1 { /* estilos */ }
+.light-theme-h2 { color: #151617; }
+.light-theme-icon { color: #000000; }
+.light-theme-button { background-color: #eeeeee; }
+.light-theme-link { color: #000000; }                                                                     
+
+/* Estilos para el tema oscuro */
+.dark-theme-body { /* estilos */ }
+.dark-theme-h1 { /* estilos */ }
+.dark-theme-h2 { /* estilos */ }
+.dark-theme-icon { color: #ffffff; }
+.dark-theme-button { color: white; background-color: #444444; }
+.dark-theme-link { color: #e2e2e2; }
+
+/* Estilos para el tema colorido */
+.colorful-theme-body { /* estilos */ }
+.colorful-theme-h1 { /* estilos */ }
+.colorful-theme-h2 { /* estilos */ }
+.colorful-theme-icon { color: #e2e2e2; }
+.colorful-theme-button { background-color: #1100ff; }
+.colorful-theme-link { color: #ececec; }
+.light-theme-lih2 {color: #222222; }
+
+.light-theme-card-h2a {    
+  text-align: center;
+    font-weight: 500;
+    background-color: #1052ccef;
+    padding: 8px;
+    border-radius: 9px;
+    font-size: 24px;
+    color: #e7e7e7;}
+
+.cardo{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+/* From https://css.glass */
+background: rgb(255 255 255 / 8%);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(-65px);
+-webkit-backdrop-filter: blur(5px);
+justify-content: space-evenly;
+border-top: 1px solid rgba(255, 255, 255, 0.3);
+border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+left: Opx;
+}
+.container-cardo{
+  position: absolute;
+    top: 103vh;
+    left: 0px;
+    flex-wrap: wrap;
+    display: flex;
 }
