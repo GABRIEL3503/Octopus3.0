@@ -628,6 +628,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 left: Opx;
 }
 .container-cardo{
+  justify-content: center;
   position: absolute;
     top: 103vh;
     left: 0px;
@@ -656,3 +657,9 @@ button:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.5);
 }
+@media screen and (max-width: 768px){
+  .imagen1 {
+    width: 55vw;
+    height: 91%;
+    padding: 28px;
+}}
