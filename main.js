@@ -103,3 +103,5 @@ function applyColorfulTheme() {
 document.getElementById('light-theme-button').addEventListener('click', applyLightTheme);
 document.getElementById('dark-theme-button').addEventListener('click', applyDarkTheme);
 document.getElementById('colorful-theme-button').addEventListener('click', applyColorfulTheme);
+
+applyDarkTheme();
