@@ -136,12 +136,15 @@ titulo-{
     color: rgb(255, 255, 255);
   }
   .titulo{
-    color: #fb00ff;
+    color: #B025E7;
   }
 
   h1{
     margin-bottom: -17px;
     font-size:56px ;
+  }
+  li h2 {
+    font-size: 20px;
   }
   .contenedor-titulo{
     display: flex;
@@ -348,28 +351,26 @@ justify-content: flex-start;
   background-color:#1052ccef;
   padding: 8px;
   border-radius: 9px;
-  font-size: 24px;
+  font-size: 20px;
   color:#e7e7e7;  ;
   }
   .bicon{
-    color: #fb00ff;
+    color: #B025E7;
   }
 
 
 
-  .filter {
-   filter: drop-shadow(2px 3px 0px gray)
-  }
+ 
   li h2{
     font-weight: 400;
   }
-  .card .llamadoaccion{
+  .llamadoaccion{
     text-align: center;
-    color: white;
-    border: 1px solid #002d80;
-   background-color: rgb(255 255 255 / 26%);
+   color: #eb5ef0;
+
+
     padding: 10px;
-    border-radius: 9px;
+
   }
   
 
@@ -525,11 +526,12 @@ padding: 28px;
 /* Estilos para el tema claro */
 .light-theme-body {
   display: flex;
-  background-color: #ffffff;
+  background: rgb(176,37,231);
+  background: linear-gradient(261deg, rgba(176,37,231,0.4738270308123249) 1%, rgba(0,156,112,0) 49%, rgba(176,37,231,0) 98%);
 }
 .light-theme-h1 {
   display: flex;
-  color: #fb00ff;
+  color:  #B025E7
 }
 .light-theme-h2 {
   display: flex;
@@ -606,10 +608,10 @@ padding: 28px;
 .light-theme-card-h2a {    
   text-align: center;
     font-weight: 500;
-    background-color: #1052ccef;
+   
     padding: 8px;
-    border-radius: 9px;
-    font-size: 24px;
+
+ 
     color: #424242;}
 
 .cardo{
@@ -663,3 +665,7 @@ button:focus {
     height: 91%;
     padding: 28px;
 }}
+
+box-icon {
+  margin-right: 12px;
+}
