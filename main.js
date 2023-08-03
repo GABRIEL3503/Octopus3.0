@@ -1,3 +1,5 @@
+AOS.init();
+
 function updateNavbar() {
   var navbar = document.getElementById("navbar");
 
@@ -167,6 +169,7 @@ document.getElementById('dark-theme-button').addEventListener('click', applyDark
 document.getElementById('colorful-theme-button').addEventListener('click', applyColorfulTheme);
 
 applyDarkTheme();
+
 
 
 
