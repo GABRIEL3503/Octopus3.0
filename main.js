@@ -15,7 +15,7 @@ document.getElementById("navbar").classList.add("transparent");
 
 
 var typed = new Typed('#element', {
-  strings: ['Atractivos.', 'Personsalizados' ,'Veloces.'],
+  strings: ['Atractivos.', 'Personalizados' ,'Veloces.'],
   typeSpeed: 111,
   loop:true,
 });
@@ -39,7 +39,7 @@ var liElements = document.querySelectorAll('ul li:not(:last-child)');
 var bodyElement = document.querySelector('body');
 var h1Element = document.getElementById('elemento');
 var h2Element = document.querySelector('h2');
-var cardElement = document.querySelector('.card');
+var cardElements = document.querySelectorAll('.card');
 
 var iconElement = document.getElementById('toggleIcon');
 var buttons = document.querySelectorAll('button');
@@ -83,11 +83,20 @@ var cardosElements = document.querySelectorAll('.cardo');
 var titulosH2Elements = document.querySelectorAll('.titulos h2:first-of-type');
 var bn39spanElements = document.querySelectorAll('.bn39span');
 var navbarElement = document.querySelector('#navbar.gradient');
+var titulo2Element = document.getElementById('titulo2');
 
 
 
 // Funciones para cambiar los temas
 function applyTheme(themeName) {
+
+  if (titulo2Element) {
+    titulo2Element.className = themeName + '-theme-titulo2';
+  }
+  cardElements.forEach(function(cardElement) {
+    cardElement.className = 'card'; // Mantener la clase 'card' y limpiar otras clases
+    cardElement.classList.add(themeName + '-theme-card');
+  });
   bodyElement.className = themeName + '-theme-body';
   h1Element.className = themeName + '-theme-h1';
   h2Element.className = themeName + '-theme-h2';
@@ -125,6 +134,10 @@ function applyTheme(themeName) {
   navbarElement.classList.remove('light-theme-navbar', 'dark-theme-navbar', 'colorful-theme-navbar');
   // Agrega la nueva clase de tema
   navbarElement.classList.add(themeName + '-theme-navbar');
+  if (titulo2Element) {
+    titulo2Element.classList.remove('light-theme-titulo2', 'dark-theme-titulo2', 'colorful-theme-titulo2');
+    titulo2Element.classList.add(themeName + '-theme-titulo2');
+  }
 }
 
 
