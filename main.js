@@ -1,25 +1,28 @@
-window.addEventListener("scroll", function() {
-  var navbar = document.getElementById("navbar");
+// Definir el ancho mínimo para ejecutar el código, por ejemplo, 768px para tabletas y dispositivos más grandes
+var minWidth = 768;
 
-  if (window.pageYOffset > 0) {
-    navbar.classList.remove("transparent");
-    navbar.classList.add("gradient");
-  } else {
-    navbar.classList.remove("gradient");
-    navbar.classList.add("transparent");
-  }
-});
+if (window.innerWidth > minWidth) {
+  window.addEventListener("scroll", function() {
+    var navbar = document.getElementById("navbar");
 
-// Asegúrate de que el navbar sea transparente al inicio
-document.getElementById("navbar").classList.add("transparent");
+    if (window.pageYOffset > 0) {
+      navbar.classList.remove("transparent");
+      navbar.classList.add("gradient");
+    } else {
+      navbar.classList.remove("gradient");
+      navbar.classList.add("transparent");
+    }
+  });
 
+  // Asegúrate de que el navbar sea transparente al inicio
+  document.getElementById("navbar").classList.add("transparent");
 
-var typed = new Typed('#element', {
-  strings: ['Atractivos.', 'Personalizados' ,'Veloces.'],
-  typeSpeed: 111,
-  loop:true,
-});
-
+  var typed = new Typed('#element', {
+    strings: ['Atractivos.', 'Personalizados', 'Veloces.'],
+    typeSpeed: 111,
+    loop: true,
+  });
+}
 
 
 

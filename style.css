@@ -443,6 +443,7 @@ justify-content: flex-start;
   }
 
   #toggleIcon .open {
+    margin-top: -174px;
       display: block;
   }
 
@@ -455,6 +456,7 @@ justify-content: flex-start;
   }
 
   #navbar.active #toggleIcon .close {
+    font-size: 29px;
       display: block;
   }
 }
