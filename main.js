@@ -1,10 +1,7 @@
-// Definir el ancho mínimo para ejecutar el código, por ejemplo, 768px para tabletas y dispositivos más grandes
-var minWidth = 768;
+function updateNavbar() {
+  var navbar = document.getElementById("navbar");
 
-if (window.innerWidth > minWidth) {
-  window.addEventListener("scroll", function() {
-    var navbar = document.getElementById("navbar");
-
+  if (navbar.classList.contains("active") || window.innerWidth > minWidth) {
     if (window.pageYOffset > 0) {
       navbar.classList.remove("transparent");
       navbar.classList.add("gradient");
@@ -12,7 +9,13 @@ if (window.innerWidth > minWidth) {
       navbar.classList.remove("gradient");
       navbar.classList.add("transparent");
     }
-  });
+  }
+}
+
+var minWidth = 768;
+
+if (window.innerWidth > minWidth || document.getElementById("navbar").classList.contains("active")) {
+  window.addEventListener("scroll", updateNavbar);
 
   // Asegúrate de que el navbar sea transparente al inicio
   document.getElementById("navbar").classList.add("transparent");
@@ -23,6 +26,7 @@ if (window.innerWidth > minWidth) {
     loop: true,
   });
 }
+
 
 
 
