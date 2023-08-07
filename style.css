@@ -381,7 +381,7 @@ justify-content: flex-start;
 
 /* Estilo por defecto para la barra de navegación */
 #navbar {
-  height: 9vh;
+  height: 7vh;
   z-index: 99222;
   display: flex;
   justify-content: flex-end;
@@ -669,7 +669,15 @@ background: red;}
 .colorful-theme-navbar {
   /* Estilos para el tema colorido */
 }
+.dark-theme-footer-h2 {
+  /* Tus estilos específicos para los h2 del footer en el tema oscuro */
+  color: white; /* ejemplo */
+}
 
+.light-theme-footer-h2 {
+  /* Tus estilos específicos para los h2 del footer en el tema claro */
+  color: black; /* ejemplo */
+}
 
 .light-theme-cardo {
 background-color: white;}
@@ -698,8 +706,37 @@ color: white;}
 .colorful-theme-titulo2 {
 color: white;}
 
+.dark-theme-li:not(:last-child)::after {
+  /* Tus estilos específicos para el tema oscuro */
+  content: '•'; /* ejemplo */
+  color: white; /* ejemplo */
+}
 
+.light-theme-li:not(:last-child)::after {
+  /* Tus estilos específicos para el tema claro */
+  content: '•'; /* ejemplo */
+  background-color: black; /* ejemplo */
+}
+.dark-theme-footer-button {
+  /* Tus estilos específicos para los botones del footer en el tema oscuro */
+  background-color: black; 
+  color: white; 
+}
 
+.light-theme-footer-button {
+  /* Tus estilos específicos para los botones del footer en el tema claro */
+  background-color: #b025e7;
+  color: black;
+}
+.dark-theme-label {
+  /* Tus estilos específicos para los labels en el tema oscuro */
+  color: white; 
+}
+
+.light-theme-label {
+  /* Tus estilos específicos para los labels en el tema claro */
+  color: black;
+}
 
 .cardo{
   z-index: 999;
@@ -814,3 +851,44 @@ html {
   scroll-behavior: smooth;
 }
 
+.form-container {
+  width: 400px;
+  margin: 0 auto;
+  padding: 2px 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+footer{
+  display: flex;
+}

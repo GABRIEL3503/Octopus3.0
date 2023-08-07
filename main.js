@@ -53,6 +53,7 @@ var cardElements = document.querySelectorAll('.card');
 var iconElement = document.getElementById('toggleIcon');
 var buttons = document.querySelectorAll('button');
 var links = document.querySelectorAll('#navbar ul li a');
+var footerH2Elements = document.querySelectorAll('footer h2');
 
 // Funciones para cambiar los temas
 // function applyLightTheme() {
@@ -93,12 +94,22 @@ var titulosH2Elements = document.querySelectorAll('.titulos h2:first-of-type');
 var bn39spanElements = document.querySelectorAll('.bn39span');
 var navbarElement = document.querySelector('#navbar.gradient');
 var titulo2Element = document.getElementById('titulo2');
-
+var footerButtonElements = document.querySelectorAll('footer button');
+var labelElements = document.querySelectorAll('label');
 
 
 // Funciones para cambiar los temas
 function applyTheme(themeName) {
-
+  
+  labelElements.forEach(function(label) {
+    label.className = themeName + '-theme-label';
+});
+  footerButtonElements.forEach(function(button) {
+    button.className = themeName + '-theme-footer-button';
+});
+  footerH2Elements.forEach(function(h2) {
+    h2.className = themeName + '-theme-footer-h2';
+});
   if (titulo2Element) {
     titulo2Element.className = themeName + '-theme-titulo2';
   }
@@ -162,6 +173,10 @@ function applyDarkTheme() {
 function applyColorfulTheme() {
   applyTheme('colorful');
 }
+document.addEventListener('DOMContentLoaded', function() {
+  applyDarkTheme();
+});
+
 
 // Eventos de click en los botones para cambiar de tema
 document.getElementById('light-theme-button').addEventListener('click', applyLightTheme);
