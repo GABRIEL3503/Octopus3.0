@@ -14,7 +14,8 @@ function updateNavbar() {
   }
 }
 
-var minWidth = 768;
+
+var minWidth = 280;
 
 if (window.innerWidth > minWidth || document.getElementById("navbar").classList.contains("active")) {
   window.addEventListener("scroll", updateNavbar);
