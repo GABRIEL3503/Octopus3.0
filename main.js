@@ -1,4 +1,25 @@
 AOS.init();
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.querySelector('#form form');
+  
+  form.addEventListener('submit', function(e) {
+      e.preventDefault(); // Evita el envío inmediato del formulario
+
+      // Envía el formulario en segundo plano usando Fetch API
+      fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form)
+      });
+
+      // Muestra el SweetAlert inmediatamente después de enviar la solicitud
+      Swal.fire({
+          title: '¡Enviando!',
+          text: 'Tu correo está siendo enviado.',
+          icon: 'info',
+          confirmButtonText: 'Ok'
+      });
+  });
+});
 
 function updateNavbar() {
   var navbar = document.getElementById("navbar");

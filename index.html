@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Porfolio-octopus</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,12 +24,12 @@
   <nav id="navbar">
     <div id="toggleIcon" class="icon">
       <span class="open">&#9776;</span> <!-- Menú Hamburguesa -->
-    
+
     </div>
     <ul id="navItems">
       <span><button id="light-theme-button">Claro</button>
         <button id="dark-theme-button"> Oscuro</button>
-      
+
       </span>
 
       <span class="navbaruno" style="display: flex;">
@@ -143,7 +145,7 @@
                   <img src="img/huincul.png" alt="Imagen superpuesta" class="superpuesta">
                 </span></span>
                 <span class="bot"> <a class="bn39 animate__animated  animate__bounceInUp"
-                    href="https://huinculturismo.tur.ar/"target="_blank">
+                    href="https://huinculturismo.tur.ar/" target="_blank">
                     <span class="bn39span">Ver Pagina</span>
                   </a></span>
 
@@ -151,10 +153,11 @@
 
               <div class="swiper-slide  d-flex" data-aos="fade-up" data-aos-duration="1400">
                 <span style="  position: relative;    display: inline-block; ">
-                  <img src="img/rectum.gif" alt=""> <img src="img/rectum.png" alt="Imagen superpuesta" class="superpuesta">
+                  <img src="img/rectum.gif" alt=""> <img src="img/rectum.png" alt="Imagen superpuesta"
+                    class="superpuesta">
                 </span></span>
                 <span class="bot"><a class="bn39 animate__animated  animate__bounceInUp"
-                    href="https://rectum369.com.ar/"target="_blank"><span class="bn39span">Ver Pagina</span>
+                    href="https://rectum369.com.ar/" target="_blank"><span class="bn39span">Ver Pagina</span>
                   </a></span>
               </div>
 
@@ -163,37 +166,44 @@
             </div>
 
           </div>
-       
+
         </div>
       </section>
       <footer id="footer" class="card">
         <div id="contact" class="" style="width: 50vw;">
-          <img class="logos"  src="img/logo-1.png" alt="">
-          <span id="h2g"> <h2>Si te interesa digitalizar tu negocio o tenes alguna consulta no dudes en comunicarte</h2></span>
-          <span class="text"><box-icon name='instagram' type='logo' size='34px' color='#b025e7' ></box-icon><box-icon
-              name='linkedin' type='logo'  size='34px' color='#b025e7'></box-icon> <box-icon name='mail-send'  size='34px' color='#b025e7'>
+          <img class="logos" src="img/logo-1.png" alt="">
+          <span id="h2g">
+            <h2>Si te interesa digitalizar tu negocio o tenes alguna consulta no dudes en comunicarte</h2>
+          </span>
+          <span class="text"> 
+            <a target="_blank" href="https://www.instagram.com/gabriel_medina3/">
+            <box-icon name='instagram' type='logo' size='34px' color='#b025e7'></box-icon></a>
+         <a target="_blank" href="https://www.linkedin.com/feed/?trk=404_page"><box-icon name='linkedin' type='logo' size='34px' color='#b025e7'></box-icon></a>   
+       <a  target="_blank" href="mailto:gabriel_jm_3@hotmail.com">  <box-icon name='mail-send' size='34px'color='#b025e7'> </box-icon></a> 
           </span>
         </div>
 
         <div id="form" class="form-container ">
           <h2 style="margin-bottom: 10px;">Contacto</h2>
-          <form action="https://formsubmit.co/your-email-address" method="POST">
+          <form
+          action="https://formspree.io/f/mwkdlqov"  method="POST">
             <div class="form-field">
               <label for="email">Correo Electrónico:</label>
-              <input type="email" id="email" name="email" required>
+              <input  type="email" id="email" name="email" required>
             </div>
 
             <div class="form-field">
               <label for="message">Mensaje:</label>
               <textarea id="message" name="message" rows="5" required></textarea>
             </div>
-
+            <input type="hidden" name="_next" value="https://www.linkedin.com/feed/?trk=404_page">
             <button style="padding:0.45rem 1.5rem ;" type="submit" class="submit-button">Enviar</button>
           </form>
         </div>
 
       </footer>
 
+    
 
 
 
@@ -211,7 +221,9 @@
     <script src="particles.min.js"></script>
     <script src="app.js"></script>
     <script src="main.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
+    
+    
 
 </body>
 
