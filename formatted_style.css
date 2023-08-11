@@ -439,13 +439,9 @@ display: none;
 display: none;
 }
 
-/*
-#navbar.active #toggleIcon .close {
-/* margin-top: -165px; */
-/* display: block; */
-/* }
-  */
-}
+
+
+
 
 #navbar ul li {
 margin: 0 1rem;
@@ -920,10 +916,10 @@ width: 66vw;
 form button{
 margin-left: 23vw;
 }
-}
+
 
 #contact{
-justify-content: space-between;
+justify-content: center;
 display: flex;
 flex-wrap:wrap ;
 flex-direction: row;

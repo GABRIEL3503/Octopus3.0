@@ -227,7 +227,7 @@ ul{
 .card h2{
   justify-content: center;
   display: flex;
-  margin-left: 10px;
+
   align-items: flex-end;
  
 }
@@ -441,7 +441,7 @@ justify-content: flex-start;
   }
 
   #toggleIcon .open {
-    /* margin-top: -165px; */
+    margin-top: -165px;
       display: block;
   }
 
@@ -793,7 +793,7 @@ button:focus {
     padding: 28px;
 }
 #navbar {
-padding-top: 113px;}
+padding-top: 162px;}
 
 .navbaruno{
   margin-left: 0px;
@@ -911,23 +911,10 @@ form button{
 width: 33vw;
 }
 
-@media (max-width: 768px) {
-  .logos{
-    width: 100%;
-   }
-  #form{
-    display: flex;
-    flex-direction: column;
- width: 66vw;
-  }
-
-  form button{
-    margin-left: 23vw;
-  }}
 
  
   #contact{
-justify-content: space-between;
+justify-content: center;
     display: flex;
     flex-wrap:wrap ;
     flex-direction: row;
@@ -972,4 +959,25 @@ justify-content: space-between;
   swal2-icon{
     background-color: rgb(176, 37, 231) !important;
     border-color: rgb(176, 37, 231) !important;}
-  
+    @media (max-width: 768px) {
+      .logos{
+        width: 100%;
+       }
+      #form{
+        display: flex;
+        flex-direction: column;
+     width: 66vw;
+      }
+    
+      form button{
+        margin-left: 23vw;
+      }
+      #h2g{
+        width: 99% ;
+      }
+    
+      .text{
+        flex-direction: row;
+      }
+    }
+    
