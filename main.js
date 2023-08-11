@@ -3,8 +3,19 @@ AOS.init();
 function updateNavbar() {
   var navbar = document.getElementById("navbar");
 
-  if (navbar.classList.contains("active") || window.innerWidth > minWidth) {
+  // Para dispositivos más grandes que minWidth, cambia el fondo según el scroll
+  if (window.innerWidth > minWidth) {
     if (window.pageYOffset > 0) {
+      navbar.classList.remove("transparent");
+      navbar.classList.add("gradient");
+    } else {
+      navbar.classList.remove("gradient");
+      navbar.classList.add("transparent");
+    }
+  }
+  // Para dispositivos más pequeños
+  else {
+    if (navbar.classList.contains("active")) {
       navbar.classList.remove("transparent");
       navbar.classList.add("gradient");
     } else {
@@ -15,20 +26,27 @@ function updateNavbar() {
 }
 
 
-var minWidth = 280;
+// Agregar siempre el evento de escucha para el scroll
+window.addEventListener("scroll", updateNavbar);
 
-if (window.innerWidth > minWidth || document.getElementById("navbar").classList.contains("active")) {
-  window.addEventListener("scroll", updateNavbar);
+// Asegurarse de que el navbar sea transparente al inicio
+document.getElementById("navbar").classList.add("transparent");
 
-  // Asegúrate de que el navbar sea transparente al inicio
-  document.getElementById("navbar").classList.add("transparent");
+const closeButton = document.querySelector('.navbaruno .close');
+
+closeButton.addEventListener('click', () => {
+    navbar.classList.remove('active');
+});
+
+var minWidth = 768;
+
 
   var typed = new Typed('#element', {
     strings: ['Atractivos.', 'Personalizados', 'Veloces.'],
     typeSpeed: 111,
     loop: true,
   });
-}
+
 
 
 
@@ -41,8 +59,7 @@ toggleIcon.addEventListener('click', () => {
     navbar.classList.toggle('active');
 });
 
-// temas---------------
-// Selecciona los elementos HTML
+
 // Selecciona los elementos HTML
 var liElements = document.querySelectorAll('ul li:not(:last-child)');
 
@@ -93,15 +110,20 @@ var h2aElement = document.querySelectorAll('.h2a');
 var cardosElements = document.querySelectorAll('.cardo');
 var titulosH2Elements = document.querySelectorAll('.titulos h2:first-of-type');
 var bn39spanElements = document.querySelectorAll('.bn39span');
-var navbarElement = document.querySelector('#navbar.gradient');
+
 var titulo2Element = document.getElementById('titulo2');
 var footerButtonElements = document.querySelectorAll('footer button');
 var labelElements = document.querySelectorAll('label');
 
+// Selección del elemento
+var closeElements = document.querySelectorAll('.close');
+
 
 // Funciones para cambiar los temas
 function applyTheme(themeName) {
-  
+  closeElements.forEach(function(closeEl) {
+    closeEl.className = 'close ' + themeName + '-theme-close';
+});
   labelElements.forEach(function(label) {
     label.className = themeName + '-theme-label';
 });
@@ -182,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Eventos de click en los botones para cambiar de tema
 document.getElementById('light-theme-button').addEventListener('click', applyLightTheme);
 document.getElementById('dark-theme-button').addEventListener('click', applyDarkTheme);
-document.getElementById('colorful-theme-button').addEventListener('click', applyColorfulTheme);
+// document.getElementById('colorful-theme-button').addEventListener('click', applyColorfulTheme);
 
 applyDarkTheme();
 
