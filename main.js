@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+
 function updateNavbar() {
   var navbar = document.getElementById("navbar");
 

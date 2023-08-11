@@ -966,3 +966,10 @@ justify-content: space-between;
 #navbar.active .navbaruno .close {
   display: block;
 }
+.swal2-confirm {
+  background-color: rgb(176, 37, 231) !important;
+  border-color: rgb(176, 37, 231) !important;}
+  swal2-icon{
+    background-color: rgb(176, 37, 231) !important;
+    border-color: rgb(176, 37, 231) !important;}
+  
