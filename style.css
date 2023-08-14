@@ -10,7 +10,7 @@ body {
 
 #particles-js {
  
-  height: 400vh;
+  height: 350vh;
   width: 100%;
   z-index: 1;
 }
@@ -737,7 +737,15 @@ color: white;}
   /* Tus estilos específicos para los labels en el tema claro */
   color: black;
 }
+.dark-theme-copyright {
+background-color: #151617;
+  color: lightgray; 
+}
 
+.light-theme-copyright {
+background-color: #ececec;
+  color: rgb(80, 80, 80);
+}
 .cardo{
   z-index: 999;
   height: 100%;
@@ -960,6 +968,11 @@ justify-content: center;
     background-color: rgb(176, 37, 231) !important;
     border-color: rgb(176, 37, 231) !important;}
     @media (max-width: 768px) {
+
+      #particles-js {
+ 
+        height: 520vh;}
+
       .logos{
         width: 100%;
        }
@@ -981,3 +994,8 @@ justify-content: center;
       }
     }
     
+    .copyright{
+padding: 10px;
+width: 100%;
+text-align: center;
+    }

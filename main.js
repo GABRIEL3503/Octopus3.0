@@ -84,43 +84,16 @@ toggleIcon.addEventListener('click', () => {
 
 // Selecciona los elementos HTML
 var liElements = document.querySelectorAll('ul li:not(:last-child)');
-
+var copyrightElements = document.querySelectorAll('.copyright');
 var bodyElement = document.querySelector('body');
 var h1Element = document.getElementById('elemento');
 var h2Element = document.querySelector('h2');
 var cardElements = document.querySelectorAll('.card');
-
+var copyrightElements = document.querySelectorAll('.copyright');
 var iconElement = document.getElementById('toggleIcon');
 var buttons = document.querySelectorAll('button');
 var links = document.querySelectorAll('#navbar ul li a');
 var footerH2Elements = document.querySelectorAll('footer h2');
-
-// Funciones para cambiar los temas
-// function applyLightTheme() {
-//   bodyElement.className = 'light-theme-body';
-//   h1Element.className = 'light-theme-h1';
-//   h2Element.className = 'light-theme-h2';
-//   cardElement.className = 'light-theme-card';
-// }
-
-// function applyDarkTheme() {
-//   bodyElement.className = 'dark-theme-body';
-//   h1Element.className = 'dark-theme-h1';
-//   h2Element.className = 'dark-theme-h2';
-//   cardElement.className = 'dark-theme-card';
-// }
-
-// function applyColorfulTheme() {
-//   bodyElement.className = 'colorful-theme-body';
-//   h1Element.className = 'colorful-theme-h1';
-//   h2Element.className = 'colorful-theme-h2';
-//   cardElement.className = 'colorful-theme-card';
-// }
-
-
-
-// Selecciona los elementos HTML
-// Selecciona tus elementos del DOM
 var bodyElement = document.getElementsByTagName('body')[0];
 var h1Element = document.getElementById('elemento');
 var h2Element = document.querySelector('h2');
@@ -143,6 +116,9 @@ var closeElements = document.querySelectorAll('.close');
 
 // Funciones para cambiar los temas
 function applyTheme(themeName) {
+  copyrightElements.forEach(function(copyrightEl) {
+    copyrightEl.className = 'copyright ' + themeName + '-theme-copyright';
+});
   closeElements.forEach(function(closeEl) {
     closeEl.className = 'close ' + themeName + '-theme-close';
 });
