@@ -999,3 +999,7 @@ padding: 10px;
 width: 100%;
 text-align: center;
     }
+    .swal2-container {
+      z-index: 10000;  /* Puedes ajustar este valor según lo que necesites */
+  }
+  
