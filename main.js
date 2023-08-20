@@ -3,17 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
   showWelcomeAlert();
 });
 
-function showWelcomeAlert() {
-  Swal.fire({
-      title: '¡Bienvenido!',
-      text: 'Estas por ingresar a una pagina interactiva, deslizate y presiona sobre el fondo para mover las particulas.',
-      imageUrl: './img/OCTOPUS_DESIGNS__1_-removebg-preview.png',
-      imageWidth: 200,  // Ancho de la imagen en pixels (ajusta según tus necesidades)
-      imageHeight: 200, // Altura de la imagen en pixels (ajusta según tus necesidades)
-      imageAlt: 'Logo personalizado', // Texto alternativo para la imagen
-      confirmButtonText: 'Aceptar'
-  });
-}
 
 
 document.addEventListener('DOMContentLoaded', function() {
