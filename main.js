@@ -197,9 +197,7 @@ function applyDarkTheme() {
   applyTheme('dark');
 }
 
-function applyColorfulTheme() {
-  applyTheme('colorful');
-}
+
 document.addEventListener('DOMContentLoaded', function() {
   applyDarkTheme();
 });
