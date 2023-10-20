@@ -203,13 +203,34 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// Eventos de click en los botones para cambiar de tema
-document.getElementById('light-theme-button').addEventListener('click', applyLightTheme);
-document.getElementById('dark-theme-button').addEventListener('click', applyDarkTheme);
-// document.getElementById('colorful-theme-button').addEventListener('click', applyColorfulTheme);
+// // Eventos de click en los botones para cambiar de tema
+// document.getElementById('light-theme-button').addEventListener('click', applyLightTheme);
+// document.getElementById('dark-theme-button').addEventListener('click', applyDarkTheme);
+// // document.getElementById('colorful-theme-button').addEventListener('click', applyColorfulTheme);
 
-applyDarkTheme();
+// applyDarkTheme();
 
 
+// Obtén la referencia al switch
+const themeSwitch = document.getElementById('theme-switch');
+
+// Función para manejar el cambio de tema basado en la posición del switch
+function handleThemeChange() {
+    if (themeSwitch.checked) {
+        applyDarkTheme();
+    } else {
+        applyLightTheme();
+    }
+}
+
+// Escuchador de eventos para el switch
+themeSwitch.addEventListener('change', handleThemeChange);
+
+// Aplica el tema oscuro inicialmente si es necesario
+if (themeSwitch.checked) {
+    applyDarkTheme();
+} else {
+    applyLightTheme();
+}
 
 
