@@ -4,6 +4,40 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+window.addEventListener('load', function() {
+  // Obtenemos las referencias a cada span por su ID
+  const infoTrigger1 = document.getElementById('info-trigger1');
+  const infoTrigger2 = document.getElementById('info-trigger2');
+  const infoTrigger3 = document.getElementById('info-trigger3');
+  const infoTrigger4 = document.getElementById('info-trigger4');
+
+  // Función para mostrar el SweetAlert
+  function showInfoAlert(message) {
+      Swal.fire({
+          title: 'Información',
+          text: message,
+          icon: 'info',
+          confirmButtonText: 'Ok'
+      });
+  }
+
+  // Función genérica para añadir el escuchador de eventos
+  function addClickListener(element, message) {
+    element.addEventListener('click', function(e) {
+      e.preventDefault(); // Previniendo cualquier comportamiento predeterminado, si es necesario
+      console.log('Clicked!');  // Esto debería aparecer en la consola cuando hagas clic en el span
+      showInfoAlert(message); // Llama a la función que muestra el SweetAlert
+    });
+  }
+
+  // Añadimos el escuchador de eventos a cada elemento con su respectivo mensaje
+  addClickListener(infoTrigger1, 'Información sobre Huincul Turismo');
+  addClickListener(infoTrigger2, 'Información sobre ServiPlanet');
+  addClickListener(infoTrigger3, 'Información sobre Sistema de Vouchers Aniceta');
+  addClickListener(infoTrigger4, 'Información sobre carta online');
+});
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.querySelector('#form form');
@@ -232,5 +266,6 @@ if (themeSwitch.checked) {
 } else {
     applyLightTheme();
 }
+
 
 

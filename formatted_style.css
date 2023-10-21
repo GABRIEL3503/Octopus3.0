@@ -4,6 +4,8 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 .bot{
+    display: flex;
+    align-items: center;
 margin-left: 8px;
 margin-top: 4px;
 }
@@ -170,7 +172,7 @@ font-family: 'Nunito', sans-serif;;
 color: #eb5ef0;
 margin-left: 20px;
 }
-}
+
 
 .animate__animated    {
 animation-duration: 139s;
@@ -244,7 +246,7 @@ left: 42%;
 left: 23%;
 }
 
-}
+
 
 /* .swiper-slide {
 background: none;
@@ -326,7 +328,7 @@ align-items: center;
 h1 {
 left: 28vw;}
 
-}
+
 
 #whatsapp-logo {
 max-width: 53px;
@@ -559,9 +561,7 @@ background-color: #ffff00;
 }
 
 /* Estilos para el tema claro */
-.light-theme-body { /* estilos */ }
 
-.light-theme-h1 { /* estilos */ }
 
 .light-theme-h2 { color: #151617; }
 
@@ -572,9 +572,7 @@ background-color: #ffff00;
 .light-theme-link { color: #000000; }
 
 /* Estilos para el tema oscuro */
-.dark-theme-body { /* estilos */ }
 
-.dark-theme-h1 { /* estilos */ }
 
 .dark-theme-lih2 {  color: white; }
 
@@ -807,7 +805,7 @@ align-content: center;
 display: none;
 }
 
-}
+
 
 .navbaruno{
 margin-left: 19px
@@ -824,7 +822,6 @@ left: 137px;
 width: 239px
 }
 
-}
 
 #navbar {
 transition: background 4s ease; /* Transición más lenta de 1 segundo */
@@ -951,42 +948,45 @@ display: none;
 #navbar.active .navbaruno .close {
 display: block;
 }
+
+
+/* Estilos para dispositivos con ancho de pantalla menor o igual a 600px */
+@media (max-width: 600px) {
+    .contenedor-titulo {
+        left: 14vw;
+        top: 51vh;
+        position: absolute;
+    }
 }
 
+/* Estilos para dispositivos con ancho de pantalla menor o igual a 767px */
 @media (max-width: 767px) {
-.botones{
-gap: 45px;
+    .botones {
+        gap: 45px;
+    }
 }
 
+/* Estilos para dispositivos con ancho de pantalla menor o igual a 768px */
 @media (max-width: 768px) {
-.card{ width: 75vw;
+    .card {
+        width: 75vw;
+    }
+    #navbar {
+        flex-direction: column;
+    }
+    .imagen1 {
+        width: 55vw;
+        height: 91%;
+        padding: 28px;
+    }
+    .logos {
+        width: 100%;
+    }
 }
 
-@media screen and (max-width: 600px) {
-.contenedor-titulo {
-left: 14vw;
-top: 51vh;
-position: absolute;
-}
-
-/* Estilos cuando la pantalla es menor a 768px (tablet) */
-@media (max-width: 768px) {
-#navbar {
-flex-direction: column;
-}
-
-@media screen and (max-width: 768px){
-.imagen1 {
-width: 55vw;
-height: 91%;
-padding: 28px;
-}
-
+/* Estilos para dispositivos con ancho de pantalla mayor o igual a 768px */
 @media (min-width: 768px) {
-.card  .titulos h2{
-margin-right: 730px;
+    .card .titulos h2 {
+        margin-right: 730px;
+    }
 }
-
-@media (max-width: 768px) {
-.logos{
-width: 100%;
