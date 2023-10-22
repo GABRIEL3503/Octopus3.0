@@ -40,7 +40,7 @@ body:has(.switch__input:checked) {
   transition-timing-function: var(--trans-timing-in);
 }
 .switch__input {
-  background-color: hsl(210,90%,70%);
+  background-color: hsl(281.77deg 100% 60.94%);
   border-radius: 0.75em;
   box-shadow:
     0 0 0 0.125em hsla(var(--hue),90%,50%,0),
@@ -89,10 +89,10 @@ body:has(.switch__input:checked) {
   z-index: 1;
 }
 .switch__input:checked {
-  background-color: hsl(165.46deg 90% 40%);
+  background-color: hsl(303.92deg 100% 55.77%);
 }
 .switch__input:checked:before {
-  background-color: hsl(220,90%,40%);
+  background-color: hsl(282.46deg 100% 14.17%);
 }
 .switch__input:checked:after {
   background-color: hsl(0,0%,0%);
