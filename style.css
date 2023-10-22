@@ -1162,3 +1162,36 @@ text-align: center;
   color: #B025E7;
   font-size: 17px;
 }
+[data-aos] {
+  opacity: 0;
+  transition: opacity 2s ease; /* Ajusta la duración aquí también si es necesario */
+}
+
+.imagen-superpuesta {
+  position: fixed;
+  top: 70%;  /* Puedes ajustar este valor para cambiar la posición vertical */
+  left: 61%; /* Puedes ajustar este valor para cambiar la posición horizontal */
+  z-index: 9999; /* Un valor alto asegura que la imagen estará sobre otros elementos */
+}
+.imagen-superpuesta.left {
+  left: 0; /* Se mostrará desde el lado izquierdo */
+  right: auto; /* Anulamos el valor anterior de 'right' */
+}
+.imagen-superpuesta2 {
+  position: fixed;
+  top: 9%;
+  left: 0%;
+  z-index: 9999;
+
+}
+
+
+.timagen-superpuesta2[data-aos="fade-left"].aos-animate {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.imagen-superpuesta2[data-aos="fade-left"]:not(.aos-animate) {
+  transform: translateX(-100%); /* Desplaza el elemento completamente fuera del viewport a la izquierda */
+  opacity: 0;
+}

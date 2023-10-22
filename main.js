@@ -269,3 +269,11 @@ if (themeSwitch.checked) {
 
 
 
+    AOS.init({
+      easing: 'ease-in-out-back',
+        startEvent: 'DOMContentLoaded', // Nombre del evento que inicializará la animación
+        offset: 120,   // Cambia el valor para controlar a qué distancia del "viewport" se activará la animación
+        delay: 0,      // Retraso en milisegundos para la animación
+        duration: 1000 // Duración de la animación en milisegundos
+    });
+
