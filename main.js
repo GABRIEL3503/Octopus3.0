@@ -123,6 +123,7 @@ toggleIcon.addEventListener('click', () => {
 
 
 // Selecciona los elementos HTML
+
 var liElements = document.querySelectorAll('ul li:not(:last-child)');
 var copyrightElements = document.querySelectorAll('.copyright');
 var bodyElement = document.querySelector('body');
@@ -149,6 +150,7 @@ var bn39spanElements = document.querySelectorAll('.bn39span');
 var titulo2Element = document.getElementById('titulo2');
 var footerButtonElements = document.querySelectorAll('footer button');
 var labelElements = document.querySelectorAll('label');
+var customCardContentElements = document.querySelectorAll('.customCard-content');
 
 // Selección del elemento
 var closeElements = document.querySelectorAll('.close');
@@ -212,14 +214,30 @@ function applyTheme(themeName) {
     // Luego, agrega la nueva clase de tema
     element.classList.add(themeName + '-theme-bn39span');
   });
-  navbarElement.classList.remove('light-theme-navbar', 'dark-theme-navbar', 'colorful-theme-navbar');
-  // Agrega la nueva clase de tema
-  navbarElement.classList.add(themeName + '-theme-navbar');
+  // navbarElement.classList.remove('light-theme-navbar', 'dark-theme-navbar', 'colorful-theme-navbar');
+  // // Agrega la nueva clase de tema
+  // navbarElement.classList.add(themeName + '-theme-navbar');
   if (titulo2Element) {
     titulo2Element.classList.remove('light-theme-titulo2', 'dark-theme-titulo2', 'colorful-theme-titulo2');
     titulo2Element.classList.add(themeName + '-theme-titulo2');
   }
+
+  customCardContentElements.forEach(function(customCardElement) {
+    // Selecciona el h2 y el p dentro del .customCard-content
+    var h2InsideCustomCard = customCardElement.querySelector('h2');
+    var pInsideCustomCard = customCardElement.querySelector('p');
+    // Aplica el tema al h2
+    if (h2InsideCustomCard) {
+      h2InsideCustomCard.className = themeName + '-theme-customCard-h2';
+    }
+
+    // Aplica el tema al p
+    if (pInsideCustomCard) {
+      pInsideCustomCard.className = themeName + '-theme-customCard-p';
+    }
+  });
 }
+
 
 
 
@@ -277,3 +295,81 @@ if (themeSwitch.checked) {
         duration: 1000 // Duración de la animación en milisegundos
     });
 
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+      // Configuración de los detalles de la alerta para cada botón
+      const alertDetails = {
+        'alertButton1': {
+          title: 'Diseño de Páginas Web',
+          content: 'Desarrollamos páginas web responsivas y personalizadas.',
+          imageUrl: 'img/huincul.lap.png',
+          description: 'Aprende más sobre nuestros servicios de diseño web.',
+          link: 'https://tu-enlace-de-paginas-web.com'
+        },
+        'alertButton2': {
+          title: 'Menú On Line',
+          content: 'Carta para Restoranes, Bares, Casas de comidas, Autodministrables.',
+          imageUrl: 'img/menu.png',
+          description: 'Aprende más sobre nuestros servicios de diseño web.',
+          link: 'https://tu-enlace-de-paginas-web.com'
+        },
+        'alertButton3': {
+          title: 'Menú On Line',
+          content: 'Carta para Restoranes, Bares, Casas de comidas, Autodministrables.',
+          imageUrl: 'img/menu.png',
+          description: 'Aprende más sobre nuestros servicios de diseño web.',
+          link: 'https://tu-enlace-de-paginas-web.com'
+        },
+        'alertButton4': {
+          title: 'Menú On Line',
+          content: 'Carta para Restoranes, Bares, Casas de comidas, Autodministrables.',
+          imageUrl: 'img/menu.png',
+          description: 'Aprende más sobre nuestros servicios de diseño web.',
+          link: 'https://tu-enlace-de-paginas-web.com'
+        },
+        'alertButton5': {
+          title: 'Menú On Line',
+          content: 'Carta para Restoranes, Bares, Casas de comidas, Autodministrables.',
+          imageUrl: 'img/menu.png',
+          description: 'Aprende más sobre nuestros servicios de diseño web.',
+          link: 'https://tu-enlace-de-paginas-web.com'
+        },
+        'alertButton6': {
+          title: 'Menú On Line',
+          content: 'Carta para Restoranes, Bares, Casas de comidas, Autodministrables.',
+          imageUrl: 'img/menu.png',
+          description: 'Aprende más sobre nuestros servicios de diseño web.',
+          link: 'https://tu-enlace-de-paginas-web.com'
+        },
+        // ... Continuar para los demás botones ...
+      };
+    
+      // Función para mostrar SweetAlert con contenido HTML
+      function showSweetAlert(buttonId) {
+        const details = alertDetails[buttonId];
+        Swal.fire({
+          title: `<strong>${details.title}</strong>`,
+          html: `
+            <p>${details.content}</p>
+            <img src="${details.imageUrl}" alt="${details.title}">
+            <p>${details.description}</p>
+            <a href="${details.link}" target="_blank">Más información</a>
+          `,
+          showCloseButton: true,
+          focusConfirm: false,
+          confirmButtonText: 'Cerrar',
+        });
+      }
+    
+      // Agregar un evento 'click' a cada botón por su ID
+      Object.keys(alertDetails).forEach(buttonId => {
+        const button = document.getElementById(buttonId);
+        if (button) {
+          button.addEventListener('click', function() {
+            showSweetAlert(buttonId);
+          });
+        }
+      });
+    });
+    
