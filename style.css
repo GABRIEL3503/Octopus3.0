@@ -1442,8 +1442,7 @@ text-align: center;
   }
 
   .swal2-popup{
-    
-
+    border-radius: 35px!important;
   height: 80%;
   width: 90%;
   display: grid;
@@ -1451,3 +1450,11 @@ text-align: center;
 
   .swal2-popup img{ 
     width: 80%;}
+
+    .swal2-close {
+      background: transparent;
+      border: none;
+      box-shadow: none; 
+      outline: none; 
+    }
+    
