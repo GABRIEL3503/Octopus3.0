@@ -1491,6 +1491,7 @@ font-weight: 200;
   z-index: 9998;
 }
 
+
 @media (min-width: 768px) {
   #logohero {
     margin-left: -74px;
@@ -1502,4 +1503,16 @@ font-weight: 200;
   .contenedor-titulo {
       margin-left: 51px;
   }
+}
+@media (max-width: 768px) {
+  .contenedor-titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+    #logohero{
+      margin-left: 0;
+      left: 25vw;
+    }
 }
