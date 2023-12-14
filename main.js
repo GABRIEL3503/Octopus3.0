@@ -104,7 +104,7 @@ var minWidth = 768;
 
 
   var typed = new Typed('#element', {
-    strings: ['Atractivos.', 'Personalizados', 'Veloces.'],
+    strings: ['Atractivas.', 'Personalizadas', 'Innovadoras.', 'Veloces.'],
     typeSpeed: 111,
     loop: true,
   });
