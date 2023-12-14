@@ -519,7 +519,7 @@ svg {
 }
 
 .logos {
-  width: 27%;
+  width: 37%;
 }
 
 .card .h2a {
@@ -1186,6 +1186,7 @@ form button {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  align-items: center;
 }
 
 .text {
