@@ -1530,3 +1530,8 @@ margin-top: -22px;
       top: 300px;
     }
 }
+
+#logoPersonalizado {
+  width: 100px; /* Ajusta esto al tamaño que desees */
+  height: auto; /* Esto mantendrá la proporción de la imagen */
+}
