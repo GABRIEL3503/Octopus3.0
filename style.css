@@ -500,7 +500,7 @@ svg {
 
 @media screen and (max-width: 600px) {
   .contenedor-titulo {
-    left: 14vw;
+    left: 21vw;
     top: 51vh;
     position: absolute;
   }
@@ -1514,5 +1514,14 @@ font-weight: 200;
     #logohero{
       margin-left: 0;
       left: 25vw;
+    }
+    #element{
+      margin-top: -12px;
+    }
+    #elemento{
+      left: 19vw;
+    }
+    #subtit{
+margin-top: -22px;
     }
 }
