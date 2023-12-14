@@ -302,10 +302,10 @@ if (themeSwitch.checked) {
       const alertDetails = {
         'alertButton1': {
           title: 'Diseño de Páginas Web',
-          content: 'Desarrollamos páginas web responsivas y personalizadas.',
+          content: 'Alguno de nuestros trabajos destacados',
           imageUrl: 'img/huincul.lap.png',
-          description: 'Aprende más sobre nuestros servicios de diseño web.',
-          link: 'https://tu-enlace-de-paginas-web.com'
+          description: 'Pagina web Viajes Turisticos Huincul turismo',
+          link: 'https://huinculturismo.tur.ar/'
         },
         'alertButton2': {
           title: 'Menú On Line',

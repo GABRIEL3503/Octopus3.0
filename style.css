@@ -158,7 +158,7 @@ p{
 }
 
 #particles-js {
-
+position: absolute;
   height: 350vh;
   width: 100%;
   z-index: 1;
@@ -1181,6 +1181,7 @@ form button {
 
 
 #contact {
+  margin-bottom: 52px;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
@@ -1243,6 +1244,7 @@ swal2-icon {
   }
 
   #form {
+    padding-bottom: 22px;
     display: flex;
     flex-direction: column;
     width: 66vw;
@@ -1458,3 +1460,46 @@ text-align: center;
       outline: none; 
     }
     
+
+    #elemento{
+      letter-spacing: 1px;
+      font-style: italic;
+font-weight: 200;
+      font-family: 'Nunito', sans-serif;
+    }
+  
+  
+  #logohero {
+    width: 222px;
+    position: relative; /* O absolute, dependiendo de tu layout */
+    z-index: 1000; /* Asegúrate de que este valor sea mayor que el del fondo */
+}
+
+
+.titulo- > span {
+  display: flex;
+  align-items: center; /* Esto alinea verticalmente los elementos dentro del flex container */
+}
+
+
+
+#logohero {
+  left: 129px;
+  margin-left: 34px;
+  position: absolute;
+  top: 19vh;
+  z-index: 9998;
+}
+
+@media (min-width: 768px) {
+  #logohero {
+    margin-left: -74px;
+    position: absolute;
+    top: 30vh; /* Igual al valor 'top' del h1 */
+    left: calc(0% - [AnchoDeLaImagen]px); /* Ajustar según el ancho real de la imagen */
+    z-index: 9998; /* Menor que el h1 para que este quede encima */
+  }
+  .contenedor-titulo {
+      margin-left: 51px;
+  }
+}
