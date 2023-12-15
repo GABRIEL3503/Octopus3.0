@@ -1008,8 +1008,7 @@ color: white;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(5px);
   justify-content: space-evenly;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
   left: Opx;
 }
 
