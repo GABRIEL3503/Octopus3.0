@@ -356,14 +356,15 @@ if (themeSwitch.checked) {
             html: `
             <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-              <div class="carr swiper-slide">
-                <img src="./img/servipl-mock.png" alt="Imagen 1">
-                <a class="link" href="URL_AQUI" target="_blank">Serviplanet</a>
-              </div>
+             
               <div class="carr swiper-slide">
                 <img src="./img/huincul.lap.png" alt="Imagen 2">
-                <a class="link" href="URL_AQUI" target="_blank">Huincul Turismo</a>
+                <a class="link" href="https://huinculturismo.tur.ar/" target="_blank">Huincul Turismo</a>
               </div>
+              <div class="carr swiper-slide">
+              <img src="./img/servipl-mock.png" alt="Imagen 1">
+              <a class="link" href="https://www.serviplanet.com.ar/" target="_blank">Serviplanet</a>
+            </div>
               <!-- Más slides aquí -->
             </div>
             <div class="swiper-pagination"></div>
