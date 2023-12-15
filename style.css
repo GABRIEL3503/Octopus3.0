@@ -1086,10 +1086,10 @@ box-icon {
 
 @media (min-width: 768px) {
 
-  .card .titulos h2 {
+  /* .card .titulos h2 {
     
     margin-right: 860px;
-  }
+  } */
 }
 
 #navbar {
@@ -1545,4 +1545,9 @@ margin-top: -22px;
   font-weight: 700;
   color: #181818;
  margin-bottom: 27px;
+}
+
+
+#destacados{
+  margin-top: 37px;
 }
