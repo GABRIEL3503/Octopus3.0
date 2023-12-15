@@ -301,6 +301,7 @@ if (themeSwitch.checked) {
       // Configuración de los detalles de la alerta para cada botón
       const alertDetails = {
         'alertButton1': {
+          isCarousel: true,
           title: 'Diseño de Páginas Web',
           content: 'Alguno de nuestros trabajos destacados',
           imageUrl: 'img/huincul.lap.png',
@@ -345,22 +346,61 @@ if (themeSwitch.checked) {
         // ... Continuar para los demás botones ...
       };
     
-      // Función para mostrar SweetAlert con contenido HTML
       function showSweetAlert(buttonId) {
         const details = alertDetails[buttonId];
-        Swal.fire({
-          title: `<strong>${details.title}</strong>`,
-          html: `
-            <p>${details.content}</p>
-            <img src="${details.imageUrl}" alt="${details.title}">
-            <p>${details.description}</p>
-            <a href="${details.link}" target="_blank">Más información</a>
-          `,
-          showCloseButton: true,
-          focusConfirm: false,
-          confirmButtonText: 'Cerrar',
-        });
+      
+        if (details.isCarousel) {
+          // Mostrar Sweet Alert con Swiper
+          Swal.fire({
+            title: 'Destacadas',
+            html: `
+            <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="carr swiper-slide">
+                <img src="./img/servipl-mock.png" alt="Imagen 1">
+                <a class="link" href="URL_AQUI" target="_blank">Serviplanet</a>
+              </div>
+              <div class="carr swiper-slide">
+                <img src="./img/huincul.lap.png" alt="Imagen 2">
+                <a class="link" href="URL_AQUI" target="_blank">Huincul Turismo</a>
+              </div>
+              <!-- Más slides aquí -->
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+            `,
+            showCloseButton: true,
+            width: 600,
+            showConfirmButton: false, // No muestra el botón "OK"
+
+            footer: `<button onclick="location.href='URL_CONSULTA_PLANES';">Consultar planes</button>`,
+            didOpen: () => {
+              new Swiper('.mySwiper', {
+                spaceBetween: 30,
+                pagination: {
+                  el: '.swiper-pagination',
+                  clickable: true,
+                },
+                navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+                },
+                loop: true // Si quieres que el carrusel gire en bucle
+              });
+            }
+          });
+        } else {
+          // Mostrar Sweet Alert estándar
+          Swal.fire({
+            title: details.title,
+            text: details.content,
+            // Otras opciones
+          });
+        }
       }
+      
     
       // Agregar un evento 'click' a cada botón por su ID
       Object.keys(alertDetails).forEach(buttonId => {

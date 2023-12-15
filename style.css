@@ -1536,3 +1536,13 @@ margin-top: -22px;
   width: 100px; /* Ajusta esto al tamaño que desees */
   height: auto; /* Esto mantendrá la proporción de la imagen */
 }
+.carr{
+  display: flex!important;
+  flex-direction: column;
+}
+
+.link{
+  font-weight: 700;
+  color: #181818;
+ margin-bottom: 27px;
+}
