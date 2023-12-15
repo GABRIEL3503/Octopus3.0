@@ -1555,3 +1555,10 @@ margin-top: -22px;
 .switch-container{
   display: none;
 }
+.dark-theme-button{
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  background: rgb(134,55,239);
+  background: linear-gradient(90deg, rgba(134,55,239,1) 5%, rgba(16,154,252,1) 49%, rgba(1,254,252,1) 83%);
+}
+
