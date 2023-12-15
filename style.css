@@ -1551,3 +1551,7 @@ margin-top: -22px;
 #destacados{
   margin-top: 37px;
 }
+
+#switch-container{
+  display: none;
+}
