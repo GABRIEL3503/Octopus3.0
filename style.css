@@ -1447,7 +1447,7 @@ text-align: center;
   .swal2-popup{
     border-radius: 35px!important;
   height: 80%;
-  width: 90%;
+  width: 600px;
   display: grid;
   }
 

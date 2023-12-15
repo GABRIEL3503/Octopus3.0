@@ -331,8 +331,8 @@ if (themeSwitch.checked) {
           link: 'https://tu-enlace-de-paginas-web.com'
         },
         'alertButton3': {
-          title: 'Menú On Line',
-          content: 'Carta para Restoranes, Bares, Casas de comidas, Autodministrables.',
+          title: 'Gift Card',
+          content: 'Generador de Gif Cards Personalizados. Para que tus clientes tengas una nueva fora de regalar tus productos o servicios',
           imageUrl: 'img/menu.png',
           description: 'Aprende más sobre nuestros servicios de diseño web.',
           link: 'https://tu-enlace-de-paginas-web.com'
@@ -412,7 +412,10 @@ if (themeSwitch.checked) {
           Swal.fire({
             title: details.title,
             text: details.content,
-            // Otras opciones
+            showCloseButton: true,
+            width: 600,
+            showConfirmButton: false, // No muestra el botón "OK"
+
           });
         }
       }
