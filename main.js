@@ -376,7 +376,7 @@ if (themeSwitch.checked) {
             width: 600,
             showConfirmButton: false, // No muestra el botón "OK"
 
-            footer: `<button onclick="location.href='URL_CONSULTA_PLANES';">Consultar planes</button>`,
+            footer: `<button onclick="location.href='https://api.whatsapp.com/send?phone=2996738175&text=Hola%20Octopus!%20Quiero%20informaci%C3%B3n%20sobre%20los%20planes%20de%20Sitios%20Web';">Consultar planes</button>`,
             didOpen: () => {
               new Swiper('.mySwiper', {
                 spaceBetween: 30,
