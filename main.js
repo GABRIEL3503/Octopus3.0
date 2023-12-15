@@ -412,10 +412,7 @@ if (themeSwitch.checked) {
           Swal.fire({
             title: details.title,
             text: details.content,
-            showCloseButton: true,
-            width: 600,
-            showConfirmButton: false, // No muestra el botón "OK"
-
+            // Otras opciones
           });
         }
       }
