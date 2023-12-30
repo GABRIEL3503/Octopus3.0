@@ -317,18 +317,35 @@ if (themeSwitch.checked) {
       const alertDetails = {
         'alertButton1': {
           isCarousel: true,
-          title: 'Diseño de Páginas Web',
-          content: 'Alguno de nuestros trabajos destacados',
-          imageUrl: 'img/huincul.lap.png',
-          description: 'Pagina web Viajes Turisticos Huincul turismo',
-          link: 'https://huinculturismo.tur.ar/'
+          title: 'Destacados',
+          // Datos específicos para el carrusel del segundo alert
+          carouselData: [
+            {
+              imageUrl: 'img/huincul.lap.png',
+              link: 'https://nuevo-enlace1.com'
+            },
+            {
+              imageUrl: 'img/servipl-mock.png',
+              link: 'https://nuevo-enlace2.com'
+            },
+            // ...más imágenes y enlaces...
+          ]
         },
         'alertButton2': {
-          title: 'Menú On Line',
-          content: 'Carta para Restoranes, Bares, Casas de comidas, Autodministrables.',
-          imageUrl: 'img/menu.png',
-          description: 'Aprende más sobre nuestros servicios de diseño web.',
-          link: 'https://tu-enlace-de-paginas-web.com'
+          isCarousel: true,
+          title: 'Destacados',
+          // Datos específicos para el carrusel del segundo alert
+          carouselData: [
+            {
+              imageUrl: 'img/elptio.png',
+              link: 'https://nuevo-enlace1.com'
+            },
+            {
+              imageUrl: 'img/restobar.png',
+              link: 'https://nuevo-enlace2.com'
+            },
+            // ...más imágenes y enlaces...
+          ]
         },
         'alertButton3': {
           title: 'Gift Card',
@@ -338,84 +355,71 @@ if (themeSwitch.checked) {
           link: 'https://tu-enlace-de-paginas-web.com'
         },
         'alertButton4': {
-          title: 'Menú On Line',
-          content: 'Carta para Restoranes, Bares, Casas de comidas, Autodministrables.',
+          title: 'Turnos on Line',
+          content: 'Esta sección está actualmente en construcción🔨',
           imageUrl: 'img/menu.png',
-          description: 'Aprende más sobre nuestros servicios de diseño web.',
+          description: '',
           link: 'https://tu-enlace-de-paginas-web.com'
         },
         'alertButton5': {
-          title: 'Menú On Line',
-          content: 'Carta para Restoranes, Bares, Casas de comidas, Autodministrables.',
+          title: 'Generador de Tikets QR',
+          content: 'Esta sección está actualmente en construcción🔨',
           imageUrl: 'img/menu.png',
-          description: 'Aprende más sobre nuestros servicios de diseño web.',
+          description: 'Esta sección está actualmente en construcción🔨',
           link: 'https://tu-enlace-de-paginas-web.com'
         },
         'alertButton6': {
-          title: 'Menú On Line',
-          content: 'Carta para Restoranes, Bares, Casas de comidas, Autodministrables.',
+          title: 'Control de inventario',
+          content: 'Esta sección está actualmente en construcción🔨',
           imageUrl: 'img/menu.png',
-          description: 'Aprende más sobre nuestros servicios de diseño web.',
+          description: 'Esta sección está actualmente en construcción🔨',
           link: 'https://tu-enlace-de-paginas-web.com'
         },
         // ... Continuar para los demás botones ...
       };
     
-      function showSweetAlert(buttonId) {
-        const details = alertDetails[buttonId];
-      
-        if (details.isCarousel) {
-          // Mostrar Sweet Alert con Swiper
-          Swal.fire({
-            title: 'Destacadas',
-            html: `
-            <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-             
-              <div class="carr swiper-slide">
-                <img src="./img/huincul.lap.png" alt="Imagen 2">
-                <a class="link" href="https://huinculturismo.tur.ar/" target="_blank">Huincul Turismo</a>
-              </div>
-              <div class="carr swiper-slide">
-              <img src="./img/servipl-mock.png" alt="Imagen 1">
-              <a class="link" href="https://www.serviplanet.com.ar/" target="_blank">Serviplanet</a>
-            </div>
-              <!-- Más slides aquí -->
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
-            `,
-            showCloseButton: true,
-            width: 600,
-            showConfirmButton: false, // No muestra el botón "OK"
+    
+function showSweetAlert(buttonId) {
+  const details = alertDetails[buttonId];
 
-            footer: `<button onclick="location.href='https://api.whatsapp.com/send?phone=2996738175&text=Hola%20Octopus!%20Quiero%20informaci%C3%B3n%20sobre%20los%20planes%20de%20Sitios%20Web';">Consultar planes</button>`,
-            didOpen: () => {
-              new Swiper('.mySwiper', {
-                spaceBetween: 30,
-                pagination: {
-                  el: '.swiper-pagination',
-                  clickable: true,
-                },
-                navigation: {
-                  nextEl: '.swiper-button-next',
-                  prevEl: '.swiper-button-prev',
-                },
-                loop: true // Si quieres que el carrusel gire en bucle
-              });
-            }
-          });
-        } else {
-          // Mostrar Sweet Alert estándar
-          Swal.fire({
-            title: details.title,
-            text: details.content,
-            // Otras opciones
-          });
-        }
+  if (details.isCarousel) {
+    let carouselHtml = '<div class="swiper mySwiper"><div class="swiper-wrapper">';
+    details.carouselData.forEach(item => {
+      carouselHtml += `<div class="carr swiper-slide"><img src="${item.imageUrl}" alt="Imagen"><a class="link" href="${item.link}" target="_blank">Ver más</a></div>`;
+    });
+    carouselHtml += '</div><div class="swiper-pagination"></div><div class="swiper-button-next"></div><div class="swiper-button-prev"></div></div>';
+
+    Swal.fire({
+      title: details.title,
+      html: carouselHtml,
+      showCloseButton: true,
+      width: 600,
+      showConfirmButton: false,
+      footer: `<button onclick="location.href='https://api.whatsapp.com/send?phone=2996738175&text=Hola%20Octopus!%20Quiero%20informaci%C3%B3n%20sobre%20los%20planes%20de%20Sitios%20Web';">Consultar planes</button>`,
+      didOpen: () => {
+        new Swiper('.mySwiper', {
+          spaceBetween: 30,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          loop: true
+        });
       }
+    });
+  } else {
+    // Mostrar Sweet Alert estándar
+    Swal.fire({
+      title: details.title,
+      text: details.content,
+      // Otras opciones
+    });
+  }
+}
       
     
       // Agregar un evento 'click' a cada botón por su ID
